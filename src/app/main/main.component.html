@@ -1,0 +1,23 @@
+<div class="main-container">
+  <mat-form-field>
+    <input matInput placeholder="todo" [(ngModel)]="todo">
+  </mat-form-field>
+  <button mat-raised-button (click)="addTodo()">Add New ToDo</button>
+  <mat-list>
+    <mat-list-item *ngFor="let todoItem of todos; let i=index">
+      <div>{{todoItem}}</div>
+      <!-- <div>
+        <span>Item# {{i}}</span>
+        <span *ngIf="todoItem !== 'hide'">{{todoItem}}</span>
+      </div> -->
+      <!-- <div [ngStyle]="{'color':todoItem === 'red' ? 'red' : 'cyan'}">{{todoItem}}</div> -->
+      <!-- <div [ngClass]="{'makered': todoItem === 'red'}">{{todoItem}}</div> -->
+      <!-- <ng-container *ngIf="todoItem === 'red'; else elseTemplate">
+        {{todoItem}}
+      </ng-container>
+      <ng-template #elseTemplate>
+        False
+      </ng-template> -->
+    </mat-list-item>
+  </mat-list>
+</div>
